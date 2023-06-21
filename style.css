@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.authorize{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-indent{
+    display: flex;
+    flex-direction:column;
+}
