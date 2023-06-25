@@ -1,32 +1,104 @@
+@font-face {
+    font-family: Rubik;
+    src: url("fonts/Rubik-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: Rubik;
+    src: url("fonts/Rubik-Medium.ttf");
+    font-weight: 500;
+    font-style:normal;
+}
 
-/*.container{
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-}*/
+@font-face {
+    font-family: Rubik;
+    src: url("fonts/Rubik-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
 body{
-    margin:0;
-    padding:0;
+    font-family: Rubik, serif;
+    background-color: #ECEAF5;
 }
-.toolbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #222;
-    border-bottom: 1px solid #ccc;
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
-.toolbar a{
-    color: #eee;
-    display: inline-block;
-    padding: 10px;
+
+header{
+    margin-top: 30px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav h1{
+    font-size: 50px;
+    font-weight: bold;
+    clear: both;
+    color: black;
+}
+
+.nav h1 span{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #8E6FBD, #BE5CD7);
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu li{
+    list-style: none;
+    float: left;
+}
+
+.menu a{
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    color: black;
+    padding-right: 50px;
     text-decoration: none;
-    font-family: Verdana, serif;
+    text-transform: uppercase;
 }
-.content{
-    margin-top: 50px;
-    padding: 10px;
+
+.menu li:last-child a{
+    padding-right: 0;
+}
+
+.contacts{
+    display: flex;
+    align-items: center;
+}
+
+.contacts h6{
+    font-size: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-right: 10px;
+    display: inline;
 }
