@@ -39,8 +39,9 @@ body{
     font-weight: normal;
     background-color: #ECEAF5;
 }
-
-.container{
+.nav,
+.home,
+.middle{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -106,12 +107,13 @@ header{
     display: inline;
 }
 
-/* main */
+/* home */
 
 .home{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 125px;
 }
 
 .home-introduction{
@@ -162,7 +164,7 @@ header{
     color: #404040;
 }
 
-.home-info .btn button{
+.btn button{
     font-size: 20px;
     font-weight: 500;
     width: 300px;
@@ -173,6 +175,88 @@ header{
     border-radius: 20px;
 }
 
-.home-info .btn button:hover{
+.btn button:hover{
     background-color: #5b4081;
+}
+
+/* middle */
+
+.middle-container{
+    background-color: #CEC3EB;
+}
+
+.middle{
+    position: relative;
+}
+
+.middle-introduction{
+    padding: 50px 140px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.middle-introduction h1{
+    color: black;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.middle-introduction p{
+    font-size: 20px;
+    color: #404040;
+    font-weight: normal;
+}
+
+.middle > svg{
+    top:4vh;
+    position: absolute;
+}
+
+.middle .left-tool{
+    left:0;
+}
+
+.middle .right-tool{
+    right: 0;
+}
+
+.capabilities p{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.capability-container{
+    display: flex;
+    justify-content: space-between;
+    color: #404040;
+    padding-bottom: 30px;
+}
+
+
+.capability-list-one, .capability-list-two{
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.capability-list-one .capability .cb-img, .capability-list-two .capability .cb-img{
+    float:left;
+    padding-right: 15px;
+}
+
+.capability-list-one .capability, .capability-list-two .capability{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+.middle .btn{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
 }
