@@ -41,7 +41,8 @@ body{
 }
 .nav,
 .home,
-.middle{
+.middle,
+.tasks{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -120,7 +121,7 @@ header{
     max-width: 764px;
 }
 
-.home-introduction h1{
+.home-introduction h2{
     max-width: 600px;
     font-size: 60px;
     font-weight: bold;
@@ -195,7 +196,7 @@ header{
     margin-bottom: 40px;
 }
 
-.middle-introduction h1{
+.middle-introduction h2{
     color: black;
     font-size: 45px;
     font-weight: bold;
@@ -238,21 +239,25 @@ header{
 .capability-list-one, .capability-list-two{
     max-width: 500px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.capability-list-one .capability .cb-img, .capability-list-two .capability .cb-img{
-    float:left;
-    padding-right: 15px;
+    flex-direction: column;
 }
 
 .capability-list-one .capability, .capability-list-two .capability{
     font-size: 20px;
-    display: flex;
-    align-items: center;
     margin-bottom: 15px;
     max-width: 500px;
+}
+
+.capability div:before{
+    content: url("assets/middle/menu_circle.svg");
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    color: #8E6FBD;
+}
+
+.capability div{
+    display: flex;
 }
 
 .middle .btn{
@@ -260,3 +265,55 @@ header{
     justify-content: center;
     padding-bottom: 80px;
 }
+
+/* tasks */
+
+.tasks{
+    padding-top: 50px;
+}
+
+.tasks-introduction{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tasks-introduction h2{
+    font-size: 45px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.tasks-introduction p{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.available-tasks{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.available-tasks .at-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 440px;
+}
+
+.at-block .at-task{
+    margin-bottom: 30px;
+}
+
+.at-block .at-task h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #8E6FBD;
+    padding-bottom: 10px;
+}
+
+.at-block .at-task p{
+    font-size: 20px;
+    color: #404040;
+}
+
