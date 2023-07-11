@@ -34,6 +34,10 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li{
     vertical-align: baseline;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: Rubik, serif;
     font-weight: normal;
@@ -43,7 +47,9 @@ body{
 .home,
 .middle,
 .tasks,
-.area{
+.area,
+.stages,
+.footer{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -58,6 +64,14 @@ header{
 .nav{
     display: flex;
     justify-content: space-between;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+.nav a:visited{
+    color: black;
 }
 .nav h1{
     font-size: 50px;
@@ -375,3 +389,86 @@ header{
     transform: scale(0.9);
 }
 
+/* stages */
+
+.stages{
+    padding: 60px 0;
+}
+
+.stages h2{
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stages .stages-block{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.stages-column .stage:first-child{
+    margin-bottom: 55px;
+}
+
+.stages-block .stages-column .stage{
+    max-width: 390px;
+    font-size: 20px;
+}
+
+.stages-column .stage h3{
+    font-weight: 500;
+    color: #8E6FBD;
+    margin-bottom: 5px;
+}
+
+.stages-column .stage h4{
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.stages-column .stage p{
+    color: #404040;
+}
+
+.stages .btn{
+    display: flex;
+    justify-content: center;
+}
+
+/* footer */
+
+footer{
+    background-color: #4D3475;
+}
+
+.footer{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footer a{
+    text-decoration: none;
+}
+
+.footer a:visited{
+    color: black;
+}
+.footer h1{
+    font-size: 50px;
+    font-weight: bold;
+    clear: both;
+    color: black;
+}
+
+.footer h1 span{
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #8E6FBD, #BE5CD7);
+}
+
+.footer .contacts{
+    color: #fff;
+}
