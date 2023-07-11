@@ -324,9 +324,6 @@ header{
     background-image: url("assets/area/area-background.png");
 }
 
-.area-container .area{
-    position: relative;
-}
 
 .area h2{
     font-size: 45px;
@@ -335,20 +332,24 @@ header{
     padding: 60px 0 40px;
 }
 
-.area-info{
+.area-block{
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding-bottom: 110px;
 }
 
-.area-block{
+.area-block .ab-info{
     max-width: 550px;
-    display: inline-block;
+    width: 100%;
 }
 
-.area-block .ab-info:not(.ab-info:first-child){
-    margin-top: 30px;
+.area-block .ab-info:nth-child(even){
+    margin-left: 50px;
+}
+
+.area-block .ab-info:not(:nth-child(-n+2)){
+    margin-top: 20px;
 }
 
 .area-block .ab-info h3{
@@ -373,3 +374,4 @@ header{
     color: #8E6FBD;
     transform: scale(0.9);
 }
+
