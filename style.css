@@ -42,7 +42,8 @@ body{
 .nav,
 .home,
 .middle,
-.tasks{
+.tasks,
+.area{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
@@ -317,3 +318,58 @@ header{
     color: #404040;
 }
 
+/* area */
+
+.area-container{
+    background-image: url("assets/area/area-background.png");
+}
+
+.area-container .area{
+    position: relative;
+}
+
+.area h2{
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.area-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 110px;
+}
+
+.area-block{
+    max-width: 550px;
+    display: inline-block;
+}
+
+.area-block .ab-info:not(.ab-info:first-child){
+    margin-top: 30px;
+}
+
+.area-block .ab-info h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: #8E6FBD;
+    margin-bottom: 20px;
+}
+
+.area-block .ab-info .ab-text{
+    font-size: 20px;
+    display: flex;
+    color: #404040;
+    margin-top: 15px;
+}
+
+.area-block .ab-info .ab-text:before{
+    content: url("assets/middle/menu_circle.svg");
+    display: flex;
+    align-items: center;
+    padding-right: 25px;
+    color: #8E6FBD;
+    transform: scale(0.9);
+}
