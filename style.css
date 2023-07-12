@@ -43,16 +43,32 @@ body{
     font-weight: normal;
     background-color: #ECEAF5;
 }
+
 .nav,
 .home,
 .middle,
 .tasks,
 .area,
 .stages,
-.footer{
+.footer {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 768px){
+    .nav,
+    .menu ul,
+    .home,
+    .middle,
+    .tasks,
+    .area,
+    .stages,
+    .footer {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 /* header */
@@ -67,18 +83,21 @@ header{
 }
 
 .nav a{
+    color: black;
     text-decoration: none;
 }
 
 .nav a:visited{
     color: black;
 }
+
 .nav h1{
     font-size: 50px;
     font-weight: bold;
     clear: both;
     color: black;
 }
+
 
 .nav h1 span{
     color: transparent;
@@ -121,6 +140,137 @@ header{
     text-transform: uppercase;
     padding-right: 10px;
     display: inline;
+}
+
+.header-burger{
+    display: none;
+}
+
+
+@media screen and (max-width: 768px){
+    .header{
+        margin: 0 auto;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index:50;
+    }
+
+    .header:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ECEAF5;
+        z-index: 2;
+    }
+
+    .nav{
+        margin: 10px auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav h1{
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        clear: both;
+        color: black;
+        z-index: 3;
+    }
+
+    .header-burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .header-burger:before,
+    .header-burger span,
+    .header-burger:after{
+        content: '';
+        background-color: #8E6FBD;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        border-radius: 10px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header-burger:before{
+        top:0;
+    }
+
+    .header-burger span{
+        top:9px;
+    }
+
+    .header-burger:after{
+        bottom:0;
+    }
+
+    .header-burger.active:before{
+        transform: rotate(45deg);
+    }
+
+    .header-burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header-burger.active span{
+        transform: scale(0);
+    }
+
+    .header-burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #CEC3EB;
+        padding: 70px 20px 20px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .menu.active{
+        left: 0;
+    }
+
+    .menu ul{
+        display: block;
+
+    }
+    .menu li{
+        float: none;
+        margin-bottom: 20px;
+    }
+
+    .menu li a{
+        font-size: 25px;
+    }
+    .contacts{
+        display: none;
+    }
+
+    body.lock{
+        overflow: hidden;
+    }
 }
 
 /* home */
@@ -193,6 +343,51 @@ header{
 
 .btn button:hover{
     background-color: #5b4081;
+}
+
+@media screen and (max-width: 768px){
+    .home{
+        padding: 80px 0 60px 0;
+        flex-direction: column-reverse;
+    }
+
+    .home-image img{
+        width: 200px;
+        padding-bottom: 40px;
+    }
+
+    .home-info .home-introduction h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .home-info .home-introduction div{
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .home-info .home-advantages{
+        padding-top: 20px;
+    }
+
+    .home-info .home-advantages .advantage{
+        max-width: 135px;
+    }
+
+    .home-info .home-advantages .advantage p{
+        padding-left: 10px;
+        font-size: 10px;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+    }
+    .btn button{
+        font-size: 12px;
+        width: 170px;
+        height: 35px;
+    }
 }
 
 /* middle */
@@ -281,6 +476,53 @@ header{
     padding-bottom: 80px;
 }
 
+@media screen and (max-width: 768px){
+    .middle > svg{
+        height: 35px;
+        width: 35px;
+        top: 5vh;
+    }
+
+    .middle .middle-introduction{
+        margin: 0 auto;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .middle .middle-introduction h2{
+        font-size: 20px;
+    }
+
+    .middle .middle-introduction p{
+        font-size: 10px;
+    }
+
+
+    .capabilities .capability-container{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .capability div:before{
+        transform: scale(0.8);
+        padding-right: 10px;
+        color: #8E6FBD;
+    }
+
+    .capability-container .capability div{
+        font-size: 12px;
+    }
+
+    .capabilities p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .middle .btn{
+        padding-bottom: 60px;
+    }
+}
+
 /* tasks */
 
 .tasks{
@@ -299,6 +541,7 @@ header{
 }
 
 .tasks-introduction p{
+    color: #404040;
     font-size: 20px;
     font-weight: normal;
 }
@@ -330,6 +573,45 @@ header{
 .at-block .at-task p{
     font-size: 20px;
     color: #404040;
+}
+
+@media screen and (max-width: 768px){
+    .tasks{
+        padding-top: 30px;
+    }
+
+    .tasks-introduction{
+        margin-bottom: 10px;
+    }
+
+    .tasks .tasks-introduction h2{
+        font-size: 20px;
+    }
+
+    .tasks .tasks-introduction p{
+        font-size: 13px;
+    }
+
+    .tasks .available-tasks{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .available-tasks img{
+        width: 100px;
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .available-tasks .at-block .at-task h3{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .available-tasks .at-block .at-task p{
+        font-size: 13px;
+        text-align: center;
+    }
 }
 
 /* area */
@@ -384,9 +666,37 @@ header{
     content: url("assets/middle/menu_circle.svg");
     display: flex;
     align-items: center;
-    padding-right: 25px;
+    padding-right: 10px;
     color: #8E6FBD;
-    transform: scale(0.9);
+    transform: scale(0.7);
+}
+
+@media screen and (max-width: 768px){
+    .area h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .area .area-block{
+        padding-bottom: 60px;
+    }
+
+    .area-block .ab-info:nth-child(even){
+        margin: 0;
+    }
+
+    .area-block .ab-info:not(:first-child){
+        margin-top: 30px;
+    }
+
+    .area-block .ab-info h3{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .area-block .ab-info .ab-text{
+        font-size: 13px;
+    }
 }
 
 /* stages */
@@ -437,6 +747,42 @@ header{
     justify-content: center;
 }
 
+@media screen and (max-width: 768px){
+    .stages h2{
+        font-size: 20px;
+    }
+
+    .stages .stages-block{
+        margin: 40px 0;
+        flex-direction: column;
+    }
+
+    .stages-block .stages-column .stage{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .stages-column .stage h3{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .stages-column .stage h4{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .stages-column .stage p{
+        font-size: 13px;
+    }
+
+    .stages-block img{
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+}
+
 /* footer */
 
 footer{
@@ -449,20 +795,21 @@ footer{
     justify-content: space-between;
 }
 .footer a{
+    color: black;
     text-decoration: none;
 }
 
 .footer a:visited{
     color: black;
 }
-.footer h1{
+.footer h2{
     font-size: 50px;
     font-weight: bold;
     clear: both;
     color: black;
 }
 
-.footer h1 span{
+.footer h2 span{
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
@@ -471,4 +818,26 @@ footer{
 
 .footer .contacts{
     color: #fff;
+}
+
+@media screen and (max-width: 768px){
+    .footer h2{
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        clear: both;
+        color: black;
+    }
+
+    .footer .contacts{
+        display: flex;
+    }
+
+    .footer .contacts h6{
+        font-size: 8px;
+    }
+
+    .footer .contacts img{
+        height: 20px;
+    }
 }
