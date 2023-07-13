@@ -1,20 +1,20 @@
 @font-face {
     font-family: Rubik;
-    src: url("/fonts/Rubik-Bold.ttf");
+    src: url("../fonts/Rubik-Bold.ttf");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: Rubik;
-    src: url("/fonts/Rubik-Medium.ttf");
+    src: url("../fonts/Rubik-Medium.ttf");
     font-weight: 500;
     font-style:normal;
 }
 
 @font-face {
     font-family: Rubik;
-    src: url("/fonts/Rubik-Regular.ttf");
+    src: url("../fonts/Rubik-Regular.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -459,7 +459,7 @@ header{
 }
 
 .capability div:before{
-    content: url("/assets/Mainpage/middle/menu_circle.svg");
+    content: url("../assets/Mainpage/middle/menu_circle.svg");
     display: flex;
     align-items: center;
     padding-right: 15px;
@@ -617,7 +617,7 @@ header{
 /* area */
 
 .area-container{
-    background-image: url("/assets/Mainpage/area/area-background.png");
+    background-image: url("../assets/Mainpage/area/area-background.png");
 }
 
 
@@ -663,7 +663,7 @@ header{
 }
 
 .area-block .ab-info .ab-text:before{
-    content: url("/assets/Mainpage/middle/menu_circle.svg");
+    content: url("../assets/Mainpage/middle/menu_circle.svg");
     display: flex;
     align-items: center;
     padding-right: 10px;
