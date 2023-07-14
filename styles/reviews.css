@@ -566,7 +566,7 @@ header{
 }
 
 .block-text:before{
-    content: url("/assets/Reviews/CartBlock/LeftModel.svg");
+    content: url("../assets/Reviews/CartBlock/LeftModel.svg");
     position: absolute;
     z-index: -1;
 }
